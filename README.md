@@ -1,30 +1,92 @@
-# VersaoAngular
+## Gestão de Tarefas — Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Aplicação web de gestão de tarefas desenvolvida com Angular e TypeScript, que permite organizar atividades num quadro kanban, definir prioridades, acompanhar estados e organizar os dados localmente no navegador.
 
-## Development server
+## Funcionalidades 
+-Criar tarefas: Adicionar tarefas com título, descrição, prioridade e estado.
+-Editar tarefas: Actualizar os dados de uma tarefa existente.
+-Eliminar tarefas: Remover tarefas que já não são necessárias.
+-Gestão de estados: Organizar tarefas nas colunas Por Fazer, Em Progresso, e Concluída.
+-Gestão de prioridade: Classificar tarefas como Baixa, Média, ou Alta.
+-Pesquisa: Procurar tarefas pelo título sem distinguir letrras maiúsculas de minúsculas.
+-Validação de formulários: Impedir a criação ou edição de tarefas com título ou descrição vazios.
+-Mensagens de erro: Informar o utilizador sobre os campos que precisam de ser preenchidos.
+-Persistência de dados: Guardar e recuperar tarefas através do Local Storage do navegador.
+-Interface responsiva: Adaptar o quadro Kanban a diferentes tamanhos de ecrã.
 
-To start a local development server, run:
+## Tecnologias 
+-Angular
+-TypeScript
+-HTML
+-CSS3
+-Local Strage API
+
+## Conceitos aplicados 
+Durante o desenvolvimento foram aolicados conceitos de programação e desenvolvimento web, incluindo:
+-Componentes Angular e templates.
+-Data binding com [(ngModel)].
+-Diretivas de controlo de fluxo, como @if, @else e @for.
+-Serviços para separar a ógica de gestão de tarefas da interface.
+-Injeção de dependências.
+-Interfaces e tipos personalizados em TypeScript.
+-Métodos de arrays, como map(), filter() e includes().
+-Validação de dados através de métodos como trim().
+-Persistênca de dados com localStorage.
+CSS responsivo com meida queries.
+
+
+## Requisitos
+
+## Att: Este projeto foi gerado com recurso ao [Angular CLI](https://github.com/angular/angular-cli) versão 22.1.3.
+
+Par executar o projeto, precisas de:
+
+-Node.js e npm instalados.
+Um navegador web atualizado.
+
+## Como executar o projeto
+
+### 1 Entrar na pasta do projeto
+
+cd versao-angular
+
+### 2 Instalar dependências
+
+npm install
+
+### 3 Iniciar a aplicação
+Para iniciar um servidor de desenvolvimento local, execute:
 
 ```bash
 ng serve
 ```
+Após o servidor estar em execução, abra o seu browser e aceda a `http://localhost:4200/`. A aplicação será recarregada 
+automaticamente sempre que modificar qualquer um dos ficheiros de origem.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Armazenamento de dados
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+As tarefas são guardadas no LocalStorage do navegador, utilizando a chave tarefas-guardadas.
+Isto Permite manter os dados após ataualizar a página ou fechar e voltar a abrir o navegador no mesmo perfil.
 
-```bash
-ng generate component component-name
-```
+A aplicação não necessita de uma base de dados ou de um backend para as funcionalidades atuais. Os dados ficam armazenados localmente no navegador utilizado.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Estrutura do projeto
 
-```bash
-ng generate --help
-```
+-models/tarefas.ts: Define a estrutura das tarefas e os tipos de prioridade e estado.
+
+-services/tarefa.service.ts: Centraliza as operações de criação, leitura, edição, eliminação e persistência.
+
+-app.ts: Gere o estado da interface, os formulários, a pesquisa e as interações.
+
+-app.html: Define a estrutura da interface e do quadro Kanban.
+
+-app.css: Contém os estilos e as regras de adaptação a diferentes ecrãs
+
+## Objetivo do projeto
+Este projeto foi desenvolvido para consolidar conhecimentos de Angular e TypeScript através da construção de uma aplicação prática, 
+com separação de responsabilidades, validação de formulários, gestão de estado e persistência de dados.
+
 
 ## Building
 
@@ -33,27 +95,8 @@ To build the project run:
 ```bash
 ng build
 ```
+Isto irá compilar o seu projeto e armazenar os artefactos de compilação no diretório `dist/`. Por predefinição, a compilação de produção otimiza a sua aplicação para desempenho e velocidade.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Recursos adicionais
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para obter mais informações sobre como utilizar a CLI do Angular, incluindo referências detalhadas de comandos, visite a página [Visão geral e referência de comandos da CLI do Angular](https://angular.dev/tools/cli).
