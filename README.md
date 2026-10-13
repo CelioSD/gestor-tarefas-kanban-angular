@@ -1,3 +1,4 @@
+
 ## Gestão de Tarefas — Angular
 
 Aplicação web de gestão de tarefas desenvolvida com Angular e TypeScript, que permite organizar atividades num quadro kanban, definir prioridades, acompanhar estados e organizar os dados localmente no navegador.
@@ -100,3 +101,7 @@ Isto irá compilar o seu projeto e armazenar os artefactos de compilação no di
 ## Recursos adicionais
 
 Para obter mais informações sobre como utilizar a CLI do Angular, incluindo referências detalhadas de comandos, visite a página [Visão geral e referência de comandos da CLI do Angular](https://angular.dev/tools/cli).
+
+# App-Web-Gestor-de-tarefas-Kanban-Angular
+Este projeto foi desenvolvido para consolidar conhecimentos de Angular e TypeScript através da construção de uma aplicação prática,  com separação de responsabilidades, validação de formulários, gestão de estado e persistência de dados.
+
